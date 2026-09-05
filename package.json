@@ -1,0 +1,12 @@
+{
+  "name": "walijomok",
+  "version": "1.0.0",
+  "description": "Backend server WaliJomok - Express + JSON",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

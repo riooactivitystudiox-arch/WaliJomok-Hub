@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Posts · WaliJomok</title><link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="container">
+<div class="header-nav"><span class="left-title">Posts</span><a href="../home.html" class="right-logo"><img src="../assets/logo-wj.png" alt="WJ"></a></div>
+<div style="padding:0 1.15rem 1.5rem">
+<div id="adminCreate" style="display:none;margin-bottom:14px"><button id="createPost" class="btn-mini-outline" style="background:none;color:#fff;cursor:pointer">+ Buat Post</button></div>
+<div id="postsContainer"></div>
+</div>
+<div class="page-footer">WaliJomok · WJ · 2026</div>
+</div>
+<div id="postModal" style="display:none;position:fixed;inset:0;background:#000b;align-items:center;justify-content:center;z-index:20;padding:20px">
+<div style="width:min(100%,430px);background:#111;border:1px solid #333;border-radius:12px;padding:20px">
+<h3 style="margin-bottom:12px">Buat Post</h3><input id="postTitle" placeholder="Judul" style="width:100%;padding:11px;margin:6px 0;background:#050505;color:#fff;border:1px solid #333;border-radius:7px;box-sizing:border-box"><textarea id="postDescription" placeholder="Isi postingan" rows="5" style="width:100%;padding:11px;margin:6px 0;background:#050505;color:#fff;border:1px solid #333;border-radius:7px;box-sizing:border-box"></textarea><input id="postMedia" placeholder="URL gambar/video (opsional)" style="width:100%;padding:11px;margin:6px 0;background:#050505;color:#fff;border:1px solid #333;border-radius:7px;box-sizing:border-box"><div style="display:flex;gap:8px;margin-top:10px"><button id="savePost" class="btn-mini-outline">Publish</button><button id="cancelPost" class="btn-mini-outline">Batal</button></div><p id="postError" style="color:#f77;font-size:.8rem"></p>
+</div></div>
+<script src="../auth.js"></script><script src="../comunity_page/forum.js"></script>
+</body></html>

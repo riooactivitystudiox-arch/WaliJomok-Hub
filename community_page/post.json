@@ -1,0 +1,22 @@
+[
+  {
+    "id": "post_1",
+    "username": "andes_lawal",
+    "title": "Selamat datang di WaliJomok!",
+    "description": "Selamat datang di komunitas WaliJomok. Semua avatar masih blank dan bisa dikustom sesuai kebutuhan.",
+    "media": "",
+    "mediaType": "image",
+    "date": "2026-09-04T00:00:00.000Z",
+    "likes": 0
+  },
+  {
+    "id": "post_2",
+    "username": "ridho_athalla",
+    "title": "Group Photo",
+    "description": "Foto grup sudah tersedia di halaman Memories.",
+    "media": "../assets/group-ss.jpg",
+    "mediaType": "image",
+    "date": "2026-09-04T01:00:00.000Z",
+    "likes": 0
+  }
+]

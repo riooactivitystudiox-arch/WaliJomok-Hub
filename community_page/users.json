@@ -1,0 +1,101 @@
+[
+  {
+    "uid": "10000001",
+    "username": "andes_lawal",
+    "password": "wj12",
+    "displayname": "Andes Lawal",
+    "role": "Admin",
+    "verified": true,
+    "profilePic": "../images/blank.png"
+  },
+  {
+    "uid": "10000002",
+    "username": "geo_jmk48",
+    "password": "wj12",
+    "displayname": "Geo JMK48",
+    "role": "Admin",
+    "verified": true,
+    "profilePic": "../images/blank.png"
+  },
+  {
+    "uid": "10000003",
+    "username": "ridho_athalla",
+    "password": "wj12",
+    "displayname": "Ridho Athalla",
+    "role": "Admin",
+    "verified": true,
+    "profilePic": "../images/blank.png"
+  },
+  {
+    "uid": "10000004",
+    "username": "dimas_dewa",
+    "password": "wj12",
+    "displayname": "Dimas Dewa",
+    "role": "Member",
+    "verified": false,
+    "profilePic": "../images/blank.png"
+  },
+  {
+    "uid": "10000005",
+    "username": "atha_rasyid",
+    "password": "wj12",
+    "displayname": "Atha Rasyid XF",
+    "role": "Member",
+    "verified": false,
+    "profilePic": "../images/blank.png"
+  },
+  {
+    "uid": "10000006",
+    "username": "doni_king",
+    "password": "wj12",
+    "displayname": "Doni King",
+    "role": "Member",
+    "verified": false,
+    "profilePic": "../images/blank.png"
+  },
+  {
+    "uid": "10000007",
+    "username": "findra",
+    "password": "wj12",
+    "displayname": "Findra",
+    "role": "Member",
+    "verified": false,
+    "profilePic": "../images/blank.png"
+  },
+  {
+    "uid": "10000008",
+    "username": "iqbal_jir",
+    "password": "wj12",
+    "displayname": "Iqbal Jir",
+    "role": "Member",
+    "verified": false,
+    "profilePic": "../images/blank.png"
+  },
+  {
+    "uid": "10000009",
+    "username": "rasyid",
+    "password": "wj12",
+    "displayname": "Rasyid",
+    "role": "Member",
+    "verified": false,
+    "profilePic": "../images/blank.png"
+  },
+  {
+    "uid": "10000010",
+    "username": "rifki_biji",
+    "password": "wj12",
+    "displayname": "Rifki Biji",
+    "role": "Member",
+    "verified": false,
+    "profilePic": "../images/blank.png"
+  },
+  {
+    "uid": "10000011",
+    "username": "new_member",
+    "password": "wj12",
+    "displayname": "New Member",
+    "role": "Member",
+    "verified": false,
+    "profilePic": "../images/blank.png"
+  }
+]

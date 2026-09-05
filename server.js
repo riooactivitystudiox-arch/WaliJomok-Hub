@@ -12,10 +12,27 @@ const communityUsersPath = path.join(__dirname, 'comunity_page', 'users.json');
 const communityPostPath = path.join(__dirname, 'comunity_page', 'post.json');
 const communityMemoriesPath = path.join(__dirname, 'comunity_page', 'memories.json');
 
+// Data awal WaliJomok. Jika Railway pernah membuat users.json kosong,
+// akun default akan dimasukkan lagi saat server start tanpa menghapus akun lain.
+const defaultUsers = [
+    { uid: '10000001', username: 'andes_lawal', password: 'wj12', displayname: 'Andes Lawal', role: 'Admin', verified: true, profilePic: '../images/blank.png' },
+    { uid: '10000002', username: 'geo_jmk48', password: 'wj12', displayname: 'Geo JMK48', role: 'Admin', verified: true, profilePic: '../images/blank.png' },
+    { uid: '10000003', username: 'ridho_athalla', password: 'wj12', displayname: 'Ridho Athalla', role: 'Admin', verified: true, profilePic: '../images/blank.png' },
+    { uid: '10000004', username: 'dimas_dewa', password: 'wj12', displayname: 'Dimas Dewa', role: 'Member', verified: false, profilePic: '../images/blank.png' },
+    { uid: '10000005', username: 'atha_rasyid', password: 'wj12', displayname: 'Atha Rasyid XF', role: 'Member', verified: false, profilePic: '../images/blank.png' },
+    { uid: '10000006', username: 'doni_king', password: 'wj12', displayname: 'Doni King', role: 'Member', verified: false, profilePic: '../images/blank.png' },
+    { uid: '10000007', username: 'findra', password: 'wj12', displayname: 'Findra', role: 'Member', verified: false, profilePic: '../images/blank.png' },
+    { uid: '10000008', username: 'iqbal_jir', password: 'wj12', displayname: 'Iqbal Jir', role: 'Member', verified: false, profilePic: '../images/blank.png' },
+    { uid: '10000009', username: 'rasyid', password: 'wj12', displayname: 'Rasyid', role: 'Member', verified: false, profilePic: '../images/blank.png' },
+    { uid: '10000010', username: 'rifki_biji', password: 'wj12', displayname: 'Rifki Biji', role: 'Member', verified: false, profilePic: '../images/blank.png' },
+    { uid: '10000011', username: 'new_member', password: 'wj12', displayname: 'New Member', role: 'Member', verified: false, profilePic: '../images/blank.png' }
+];
+
 const readJSON = (filePath) => {
     if (!fs.existsSync(filePath)) return [];
     try {
-        return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        return Array.isArray(data) ? data : [];
     } catch (error) {
         return [];
     }
@@ -24,6 +41,31 @@ const readJSON = (filePath) => {
 const writeJSON = (filePath, data) => {
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
 };
+
+function ensureDefaultUsers() {
+    let users = readJSON(communityUsersPath);
+    let changed = false;
+
+    for (const defaultUser of defaultUsers) {
+        const exists = users.some(user =>
+            String(user.username || '').toLowerCase() === defaultUser.username.toLowerCase()
+        );
+
+        if (!exists) {
+            users.push(defaultUser);
+            changed = true;
+        }
+    }
+
+    if (changed || !fs.existsSync(communityUsersPath)) {
+        writeJSON(communityUsersPath, users);
+    }
+
+    return users;
+}
+
+// Jalankan sebelum endpoint menerima request. Ini penting untuk deployment Railway.
+ensureDefaultUsers();
 
 const safeUser = (user) => {
     if (!user) return null;
